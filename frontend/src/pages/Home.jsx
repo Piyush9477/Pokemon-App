@@ -6,7 +6,7 @@ function Home() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [offset, setOffset] = useState(0);
-  const limit = 10;
+  const limit = 5;
 
   useEffect(() => {
     const fetchPokemon = async () => {

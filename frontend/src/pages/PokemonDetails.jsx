@@ -34,7 +34,8 @@ function PokemonDetails() {
       <img className="pokemon-image" src={pokemon.sprites.front_default} alt={pokemon.name} />
       <p className="details-info">Height: {pokemon.height}</p>
       <p className="details-info">Weight: {pokemon.weight}</p>
-      <p className="details-info">Types: {pokemon.types.map(t => t.type.name).join(', ')}</p>
+      <p className="details-info">Types: {pokemon.types.join(', ')}</p>
+      <p className="details-info">Abilities: {pokemon.abilities.join(', ')}</p>
       <Link className="back-link" to="/">← Back to List</Link>
     </div>
   );
