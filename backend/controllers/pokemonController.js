@@ -10,7 +10,6 @@ const getPokemonList = async (req, res) => {
 
     res.json({count: response.data.count, next: response.data.next, previous: response.data.previous, results: filteredResults});
   } catch (error) {
-    console.log("home error");
     res.status(500).json({ message: 'Error fetching Pokemon list' });
   }
 };
@@ -35,7 +34,6 @@ const getPokemonDetails = async (req, res) => {
 
     res.json(filteredData);
   } catch (error) {
-    console.log("details error");
     res.status(500).json({ message: 'Error fetching Pokemon details' });
   }
 };

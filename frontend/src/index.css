@@ -41,23 +41,21 @@ ul {
   list-style-type: none;
   padding: 0;
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 2rem;
-  margin-bottom: 2.5rem;
+  display: block; 
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 li {
+  margin: 0.5rem 0;
+  padding: 0.7rem 1rem;
   background: var(--color-light-grey);
-  padding: 1.2rem 0.8rem;
   border-radius: 14px;
-  text-align: center;
   box-shadow: 0 4px 12px 0 rgba(90,67,178, 0.09);
-  transition: transform 0.18s ease, background 0.18s;
+  transition: background 0.18s ease;
 }
 
 li:hover {
-  transform: translateY(-6px) scale(1.04);
   background: var(--color-purple);
 }
 
@@ -66,12 +64,12 @@ a {
   font-weight: 700;
   font-size: 1.25rem;
   text-decoration: none;
-  transition: color 0.2s;
 }
 
 li:hover a {
   color: var(--color-white);
 }
+
 
 .pagination {
   margin-top: 1.5rem;
