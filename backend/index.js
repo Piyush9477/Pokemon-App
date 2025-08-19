@@ -1,13 +1,11 @@
-const express = require("express");
-const axios = require("axios");
-const cors = require("cors");
-const pokemonRoutes = require("./routes/pokemonRoutes");
+const express = require('express');
+const cors = require('cors');
+const pokemonRoutes = require('./routes/pokemonRoutes');
 
 const app = express();
 app.use(cors());
 
-// Pokemon Routes
-app.use("/api", pokemonRoutes);
+app.use('/api/pokemon', pokemonRoutes);
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
